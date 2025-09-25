@@ -9,27 +9,60 @@ def version():
 @app.command()
 def check(day: str, month: str):
     if month.lower() == 'jan':
-        print("Aquarius")
+        if int(day) > 19:
+            print("Aquarius")
+        else:
+            print("Capricorn")
     elif month.lower() == 'feb':
-        print("Pisces")
+        if int(day) > 18:
+            print("Pisces")
+        else:
+            print("Aquarius")
     elif month.lower() == 'mar':
-        print("Aries")
+        if int(day) > 21:
+            print("Aries")
+        else:
+            print("Pisces")
     elif month.lower() == 'apr':
-        print("Taurus")
+        if int(day) > 19:
+            print("Taurus")
+        else:
+            print("Aries")
     elif month.lower() == 'may':
-        print("Gemini")
+        if int(day) > 20:
+            print("Gemini")
+        else:
+            print("Taurus")
     elif month.lower() == 'jun':
-        print("Cancel")
+        if int(day) > 20:
+            print("Cancel")
+        else:
+            print("Taurus")
     elif month.lower() == 'jul':
-        print("Leo")
+        if int(day) > 22:
+            print("Leo")
+        else:
+            print("Cancel")
     elif month.lower() == 'aug':
-        print("Virgo")
+        if int(day) > 22:
+            print("Virgo")
+        else:
+            print("Leo")
     elif month.lower() == 'sep':
-        print("Libra")
+        if int(day) > 22:
+            print("Libra")
+        else:
+            print("Virgo")
     elif month.lower() == 'oct':
-        print("Scorpio")
+        if int(day) > 22:
+            print("Scorpio")
+        else:
+            print("Virgo")
     elif month.lower() == 'nov':
-        print("Sagittarius")
+        if int(day) > 21:
+            print("Sagittarius")
+        else:
+            print("Scorpio")
     elif month.lower() == 'dec':
         print("Capricorn")
     else:
