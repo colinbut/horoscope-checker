@@ -64,7 +64,10 @@ def check(day: str, month: str):
         else:
             print("Scorpio")
     elif month.lower() == 'dec':
-        print("Capricorn")
+        if int(day) > 21:
+            print("Capricorn")
+        else:
+            print("Sagittarius")
     else:
         pass
 
