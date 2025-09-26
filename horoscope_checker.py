@@ -49,14 +49,14 @@ def check(day: str, month: str):
             print(TAURUS)
     elif month.lower() == 'jun':
         if day > 20:
-            print("Cancer")
+            print(CANCER)
         else:
             print(TAURUS)
     elif month.lower() == 'jul':
         if day > 22:
             print(LEO)
         else:
-            print("Cancer")
+            print(CANCER)
     elif month.lower() == 'aug':
         if day > 22:
             print(VIRGO)
