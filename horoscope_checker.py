@@ -19,65 +19,78 @@ LIBRA = "Libra"
 SAGITTARIUS = "Sagittarius"
 CAPRICORN = "Capricorn"
 
+JAN = "jan"
+FEB = "feb"
+MAR = "mar"
+APR = "apr"
+MAY = "may"
+JUN = "jun"
+JUL = "jul"
+AUG = "aug"
+SEP = "sep"
+OCT = "oct"
+NOV = "nov"
+DEC = "dec" 
+
 @app.command()
 def check(day: str, month: str):
     day = int(day)
-    if month.lower() == 'jan':
+    if month.lower() == JAN:
         if day > 19:
             print(AQUARIUS)
         else:
             print(CAPRICORN)
-    elif month.lower() == 'feb':
+    elif month.lower() == FEB:
         if day > 18:
             print(PISCES)
         else:
             print(AQUARIUS)
-    elif month.lower() == 'mar':
+    elif month.lower() == MAR:
         if day > 21:
             print(ARIES)
         else:
             print(PISCES)
-    elif month.lower() == 'apr':
+    elif month.lower() == APR:
         if day > 19:
             print(TAURUS)
         else:
             print(ARIES)
-    elif month.lower() == 'may':
+    elif month.lower() == MAY:
         if day > 20:
             print(GEMINI)
         else:
             print(TAURUS)
-    elif month.lower() == 'jun':
+    elif month.lower() == JUN:
         if day > 20:
             print(CANCER)
         else:
             print(TAURUS)
-    elif month.lower() == 'jul':
+    elif month.lower() == JUL:
         if day > 22:
             print(LEO)
         else:
             print(CANCER)
-    elif month.lower() == 'aug':
+    elif month.lower() == AUG:
         if day > 22:
             print(VIRGO)
         else:
             print(LEO)
-    elif month.lower() == 'sep':
+    elif month.lower() == SEP:
         if day > 22:
             print(LIBRA)
         else:
             print(VIRGO)
-    elif month.lower() == 'oct':
+    elif month.lower() == OCT:
         if day > 22:
             print(SCORPIO)
         else:
             print(VIRGO)
-    elif month.lower() == 'nov':
+    elif month.lower() == NOV:
         if day > 21:
             print(SAGITTARIUS)
         else:
             print(SCORPIO)
-    elif month.lower() == 'dec':
+    elif month.lower() == DEC:
         if day > 21:
             print(CAPRICORN)
         else:
