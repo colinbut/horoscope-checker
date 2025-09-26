@@ -6,69 +6,82 @@ app = typer.Typer()
 def version():
     print("v0.0.1")
 
+AQUARIUS = "Aquarius"
+PISCES = "Pisces"
+ARIES = "Aries"
+TAURUS = "Taurus"
+GEMINI = "Gemini"
+CANCER = "Cancer"
+LEO = "Leo"
+VIRGO = "Virgo"
+SCORPIO = "Scorpio"
+LIBRA = "Libra"
+SAGITTARIUS = "Sagittarius"
+CAPRICORN = "Capricorn"
+
 @app.command()
 def check(day: str, month: str):
     day = int(day)
     if month.lower() == 'jan':
         if day > 19:
-            print("Aquarius")
+            print(AQUARIUS)
         else:
-            print("Capricorn")
+            print(CAPRICORN)
     elif month.lower() == 'feb':
         if day > 18:
-            print("Pisces")
+            print(PISCES)
         else:
-            print("Aquarius")
+            print(AQUARIUS)
     elif month.lower() == 'mar':
         if day > 21:
-            print("Aries")
+            print(ARIES)
         else:
-            print("Pisces")
+            print(PISCES)
     elif month.lower() == 'apr':
         if day > 19:
-            print("Taurus")
+            print(TAURUS)
         else:
-            print("Aries")
+            print(ARIES)
     elif month.lower() == 'may':
         if day > 20:
-            print("Gemini")
+            print(GEMINI)
         else:
-            print("Taurus")
+            print(TAURUS)
     elif month.lower() == 'jun':
         if day > 20:
             print("Cancel")
         else:
-            print("Taurus")
+            print(TAURUS)
     elif month.lower() == 'jul':
         if day > 22:
-            print("Leo")
+            print(LEO)
         else:
             print("Cancel")
     elif month.lower() == 'aug':
         if day > 22:
-            print("Virgo")
+            print(VIRGO)
         else:
-            print("Leo")
+            print(LEO)
     elif month.lower() == 'sep':
         if day > 22:
-            print("Libra")
+            print(LIBRA)
         else:
-            print("Virgo")
+            print(VIRGO)
     elif month.lower() == 'oct':
         if day > 22:
-            print("Scorpio")
+            print(SCORPIO)
         else:
-            print("Virgo")
+            print(VIRGO)
     elif month.lower() == 'nov':
         if day > 21:
-            print("Sagittarius")
+            print(SAGITTARIUS)
         else:
-            print("Scorpio")
+            print(SCORPIO)
     elif month.lower() == 'dec':
         if day > 21:
-            print("Capricorn")
+            print(CAPRICORN)
         else:
-            print("Sagittarius")
+            print(SAGITTARIUS)
     else:
         pass
 
