@@ -37,64 +37,64 @@ def check(day: str, month: str):
     day = int(day)
     if month.lower() == JAN:
         if day > 19:
-            print(AQUARIUS)
+            return AQUARIUS
         else:
-            print(CAPRICORN)
+            return CAPRICORN
     elif month.lower() == FEB:
         if day > 18:
-            print(PISCES)
+            return PISCES
         else:
-            print(AQUARIUS)
+            return AQUARIUS
     elif month.lower() == MAR:
         if day > 21:
-            print(ARIES)
+            return ARIES
         else:
-            print(PISCES)
+            return PISCES
     elif month.lower() == APR:
         if day > 19:
-            print(TAURUS)
+            return TAURUS
         else:
-            print(ARIES)
+            return ARIES
     elif month.lower() == MAY:
         if day > 20:
-            print(GEMINI)
+            return GEMINI
         else:
-            print(TAURUS)
+            return TAURUS
     elif month.lower() == JUN:
         if day > 20:
-            print(CANCER)
+            return CANCER
         else:
             print(TAURUS)
     elif month.lower() == JUL:
         if day > 22:
-            print(LEO)
+            return LEO
         else:
-            print(CANCER)
+            return CANCER
     elif month.lower() == AUG:
         if day > 22:
-            print(VIRGO)
+            return VIRGO
         else:
-            print(LEO)
+            return LEO
     elif month.lower() == SEP:
         if day > 22:
-            print(LIBRA)
+            return LIBRA
         else:
-            print(VIRGO)
+            return VIRGO
     elif month.lower() == OCT:
         if day > 22:
-            print(SCORPIO)
+            return SCORPIO
         else:
-            print(VIRGO)
+            return VIRGO
     elif month.lower() == NOV:
         if day > 21:
-            print(SAGITTARIUS)
+            return SAGITTARIUS
         else:
-            print(SCORPIO)
+            return SCORPIO
     elif month.lower() == DEC:
         if day > 21:
-            print(CAPRICORN)
+            return CAPRICORN
         else:
-            print(SAGITTARIUS)
+             return SAGITTARIUS
     else:
         pass
 
