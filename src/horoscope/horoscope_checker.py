@@ -64,7 +64,7 @@ def check(day: str, month: str):
         if day > 20:
             return CANCER
         else:
-            print(TAURUS)
+            return GEMINI
     elif month.lower() == JUL:
         if day > 22:
             return LEO
