@@ -1,10 +1,18 @@
 from src.horoscope import horoscope_checker
 
 def test_horoscope_check_aquarius():
-    assert horoscope_checker.check("19", "jan") == 'Capricorn'
+    for x in range(21, 32):
+        print(f"test {x} of Jan is Aquarius")
+        assert horoscope_checker.check(x, "jan") == 'Aquarius'
+    for y in range(1, 18):
+        print(f"test {y} of Feb is Aquarius")
+        assert horoscope_checker.check(y, "feb") == 'Aquarius'
 
 def test_horoscope_check_pisces():
-    assert horoscope_checker.check("20", "feb") == 'Pisces'
+    for x in range(19, 29):
+        assert horoscope_checker.check(x, "feb") == 'Pisces'
+    for y in range(1, 19):
+        assert horoscope_checker.check(y, "mar") == 'Pisces'
 
 def test_horoscope_check_aries():
     assert horoscope_checker.check("25", "mar") == "Aries"
@@ -36,3 +44,6 @@ def test_horoscope_check_sagittarius():
 def test_horoscope_check_capricorn():
     assert horoscope_checker.check("22", "Dec") == "Capricorn"
 
+
+def test_not_valid_day():
+    assert horoscope_checker.check("0", "Jan") == "ERROR"

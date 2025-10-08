@@ -36,10 +36,12 @@ DEC = "dec"
 def check(day: str, month: str):
     day = int(day)
     if month.lower() == JAN:
-        if day > 19:
+        if 20 <= day <= 31:
             return AQUARIUS
-        else:
+        elif 1 <= day <= 19:
             return CAPRICORN
+        else:
+            return "ERROR"
     elif month.lower() == FEB:
         if day > 18:
             return PISCES
