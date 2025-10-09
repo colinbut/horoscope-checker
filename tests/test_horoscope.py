@@ -15,7 +15,10 @@ def test_horoscope_check_pisces():
         assert horoscope_checker.check(y, "mar") == 'Pisces'
 
 def test_horoscope_check_aries():
-    assert horoscope_checker.check("25", "mar") == "Aries"
+    for x in range(21, 30):
+        assert horoscope_checker.check(x, "mar") == "Aries"
+    for y in range(1, 20):
+        assert horoscope_checker.check(y, "apr") == "Aries"
 
 def test_horoscope_check_taurus():
     assert horoscope_checker.check("20", "apr") == "Taurus"
