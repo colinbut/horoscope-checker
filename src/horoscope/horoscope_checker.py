@@ -48,7 +48,7 @@ def check(day: str, month: str):
         else:
             return AQUARIUS
     elif month.lower() == MAR:
-        if day > 21:
+        if day > 20:
             return ARIES
         else:
             return PISCES
