@@ -1,5 +1,6 @@
 import typer
 from months import Months
+from horoscopes import Horoscopes
 
 app = typer.Typer()
 
@@ -7,105 +8,92 @@ app = typer.Typer()
 def version():
     print("v0.0.1")
 
-AQUARIUS = "Aquarius"
-PISCES = "Pisces"
-ARIES = "Aries"
-TAURUS = "Taurus"
-GEMINI = "Gemini"
-CANCER = "Cancer"
-LEO = "Leo"
-VIRGO = "Virgo"
-SCORPIO = "Scorpio"
-LIBRA = "Libra"
-SAGITTARIUS = "Sagittarius"
-CAPRICORN = "Capricorn"
-
 
 @app.command()
 def check(day: str, month: str):
     day = int(day)
     if month.lower() == Months.JANUARY:
         if 20 <= day <= 31:
-            return AQUARIUS
+            return Horoscopes.AQUARIUS
         elif 1 <= day <= 19:
-            return CAPRICORN
+            return Horoscopes.CAPRICORN
         else:
             return "ERROR"
     elif month.lower() == Months.FEBRUARY:
         if 19 <= day <= 29:
-            return PISCES
+            return Horoscopes.PISCES
         elif 1 <= day <= 18:
-            return AQUARIUS
+            return Horoscopes.AQUARIUS
         else:
             return "ERROR"
     elif month.lower() == Months.MARCH:
         if 21 <= day <= 31:
-            return ARIES
+            return Horoscopes.ARIES
         elif 1 <= day <= 20:
-            return PISCES
+            return Horoscopes.PISCES
         else: 
             return "ERROR"
     elif month.lower() == Months.APRIL:
         if 20 <= day <= 30:
-            return TAURUS
+            return Horoscopes.TAURUS
         elif 1 <= day <= 19:
-            return ARIES
+            return Horoscopes.ARIES
         else:
             return "ERROR"
     elif month.lower() == Months.MAY:
         if 21 <= day <= 31:
-            return GEMINI
+            return Horoscopes.GEMINI
         elif 1 <= day <= 20:
-            return TAURUS
+            return Horoscopes.TAURUS
         else:
             return "ERROR"
     elif month.lower() == Months.JUNE:
         if 21 <= day <= 30:
-            return CANCER
+            return Horoscopes.ANCER
         elif 1 <= day <= 20:
-            return GEMINI
+            return Horoscopes.GEMINI
         else:
             return "ERROR"
     elif month.lower() == Months.JULY:
         if 23 <= day <= 32:
-            return LEO
+            return Horoscopes.LEO
         elif 1 <= day <= 22:
-            return CANCER
+            return Horoscopes.CANCER
         else:
             return "ERROR"
     elif month.lower() == Months.AUGUST:
         if 23 <= day <= 31:
-            return VIRGO
+            return Horoscopes.VIRGO
         elif 1 <= day <= 22:
-            return LEO
+            return Horoscopes.LEO
         else:
             return "ERROR"
     elif month.lower() == Months.SEPTEMBER:
         if 23 <= day <= 30:
-            return LIBRA
+            return Horoscopes.LIBRA
         elif 1 <= day <= 22:
-            return VIRGO
+            return Horoscopes.VIRGO
         else:
             return "ERROR"
     elif month.lower() == Months.OCTOBER:
         if 23 <= day <= 31:
-            return SCORPIO
+            return Horoscopes.SCORPIO
         elif 1 <= day <= 22:
-            return LIBRA
+            return Horoscopes.LIBRA
         else:
             return "ERROR"
     elif month.lower() == Months.NOVEMBER:
         if 22 <= day <= 30:
-            return SAGITTARIUS
+            return Horoscopes.SAGITTARIUS
         elif 1 <= day <= 21:
-            return SCORPIO
+            return Horoscopes.SCORPIO
         else:
             return "ERROR"
     elif month.lower() == Months.DECEMBER:
         if 22 <= day <= 31:
-            return CAPRICORN
+            return Horoscopes.CAPRICORN
         elif 1 <= day <= 21:
-             return SAGITTARIUS
+             return Horoscopes.SAGITTARIUS
         else:
             return "ERROR"
     else:
