@@ -99,7 +99,7 @@ def check(day: str, month: str):
         else:
             return ERROR
     else:
-        pass
+        return ERROR
 
 if __name__ == "__main__":
     app()
